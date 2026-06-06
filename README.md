@@ -67,4 +67,4 @@
 ---
 
 
-> ⚠️ **Atenção:** A Pessoa 3 depende do código pronto para tirar os prints dos casos de teste.
+> ⚠️ **Atenção:** A Pessoa 3 depende do código pronto para tirar os prints dos casos de teste. Que provavelmente vai ser o Caio Gabriel que vai fazer.
