@@ -119,20 +119,3 @@ Justificativa: Existe um compilador escrito/executavel em C capaz de traduzir C 
 
 > **Atencao:** A Pessoa 3 depende do codigo pronto para tirar os prints dos casos de teste.
 
----
-
-# Rubrica de Avaliacao
-
-A rubrica a seguir distribui os 80 pontos em criterios binarios ou parametricos estritos, facilitando a analise de presenca e conformidade dos artefatos entregues.
-
-| Categoria | Criterio de Avaliacao Parametrico | Pontos |
-|------------|----------------------------------|---------|
-| **1. Conformidade e Formatacao (10 pts)** | **1.1. Estrutura do Pacote:** Presenca de arquivo `README.md` valido e codigo-fonte em pasta raiz ou acessivel (ZIP ou repositorio aberto). | 5 |
-| | **1.2. Relatorio Tecnico:** Relatorio entregue obrigatoriamente no formato PDF. | 5 |
-| **2. Compilacao e Execucao (20 pts)** | **2.1. Funcionalidade:** O codigo principal executa (interpreta) ou compila sem gerar erros fatais (`SyntaxError`, `CompileError`, `SegFault` no arranque). | 10 |
-| | **2.2. Documentacao de Setup:** O arquivo `README.md` contem os comandos exatos de terminal exigidos para executar o projeto. | 10 |
-| **3. Core do Projeto (30 pts)** | **3.1. Estrutura de Dados Especifica:** O codigo implementa explicitamente as estruturas teoricas requeridas pelo tema escolhido (ex.: classes para No/Grafo, Arrays como Pilha, Hash Maps). | 15 |
-| | **3.2. Saida Esperada:** A execucao do programa imprime/retorna resultados compativeis com o problema proposto (ex.: estado da pilha impresso, lista de TAC, relatorio de nos coloridos, erros de tipagem). | 15 |
-| **4. Relatorio Tecnico (20 pts)** | **4.1. Secoes Obrigatorias:** Presenca exata das 3 secoes: **Introducao**, **Metodologia de Implementacao** e **Casos de Teste**. | 10 |
-| | **4.2. Evidencia de Testes:** A secao **Casos de Teste** inclui blocos de codigo ou capturas de tela demonstrando entradas (*inputs*) e saidas (*outputs*) do sistema criado. | 10 |
-| **TOTAL** | A nota final deve ser a soma exata dos criterios atendidos. | **80** |
