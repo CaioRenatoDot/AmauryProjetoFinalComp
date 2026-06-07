@@ -1,46 +1,65 @@
-# Projeto: Validador de Bootstrapping - Divisao de Tarefas
+# Validador de Bootstrapping com Diagramas em T
 
-> **Avaliacao PBL:** Componentes de Compiladores
-> **Grupo:** 3 pessoas | **Prazo:** 7 dias
+## Descrição do Projeto
+
+Este projeto implementa um **Validador de Bootstrapping utilizando Diagramas em T**, conceito utilizado na área de Compiladores para representar tradutores de linguagens e verificar a viabilidade de processos de compilação e bootstrapping.
+
+O sistema permite:
+
+- Criar Diagramas em T contendo Linguagem Fonte, Linguagem Alvo e Linguagem Base;
+- Verificar se um processo de bootstrapping é viável;
+- Validar encadeamentos de múltiplos Diagramas em T;
+- Exibir justificativas detalhadas para cada validação realizada.
+
+O projeto foi desenvolvido em **Python 3**, utilizando apenas bibliotecas padrão da linguagem.
 
 ---
 
-## Sobre o Projeto
+## Estrutura do Projeto
 
-Este projeto implementa um validador de bootstrapping usando **Diagramas em T**. O programa recebe as linguagens **fonte**, **alvo** e **base** de um compilador e verifica se a compilacao cruzada e viavel conforme as regras modeladas.
+```text
+projeto/
+│
+├── main.py
+├── models.py
+├── validador.py
+└── README.md
+```
 
-O codigo foi desenvolvido em **Python** e nao possui dependencias externas.
+### Arquivos
+
+| Arquivo | Descrição |
+|---|---|
+| `main.py` | Interface principal para entrada de dados pelo usuário |
+| `models.py` | Implementação das estruturas de dados e regras de validação |
+| `validador.py` | Casos de teste pré-definidos para validação do algoritmo |
+| `README.md` | Documentação do projeto |
+
+---
+
+## Requisitos
+
+- Python 3.10 ou superior
+
+Verifique a instalação com:
+
+```bash
+python --version
+```
 
 ---
 
 ## Como Executar
 
-Na raiz do repositorio, execute no Windows:
-
-```bash
-py -3 main.py
-```
-
-Para rodar os casos de teste demonstrativos:
-
-```bash
-py -3 validator.py
-```
-
-Em ambientes onde o comando `python` ou `python3` esteja configurado, tambem e possivel executar:
-
 ```bash
 python main.py
-python validator.py
-python3 main.py
-python3 validator.py
 ```
 
 ---
 
 ## Exemplo de Uso
 
-Entrada:
+**Entrada:**
 
 ```text
 Linguagem Fonte: C
@@ -48,74 +67,54 @@ Linguagem Alvo: ASM
 Linguagem Base: C
 ```
 
-Saida esperada:
+**Saída:**
 
 ```text
+Diagrama informado:
+  Fonte: C
+  Alvo:  ASM
+  Base:  C
+
 Resultado: VIAVEL
-Justificativa: Existe um compilador escrito/executavel em C capaz de traduzir C para ASM. Como a base coincide com a linguagem disponivel, a compilacao cruzada e viavel.
+
+Justificativa:
+Existe um compilador escrito/executavel em C capaz de traduzir C para ASM.
+Como a base coincide com a linguagem disponivel, a compilacao cruzada e viavel.
 ```
 
 ---
 
-## Pessoa 1 - Logica Central e Codigo
+## Casos de Teste
 
-**Responsabilidade:** Implementar o programa funcional do validador.
+Execute os casos pré-definidos com:
 
-### Tarefas:
-- Modelar as regras dos **Diagramas em T** (T-diagrams) para determinar viabilidade de compilacao cruzada
-- Implementar a leitura das 3 entradas do usuario:
-  - Linguagem Fonte
-  - Linguagem Alvo
-  - Linguagem Base
-- Implementar a funcao de validacao que cruza as entradas com as regras
-- Garantir saidas claras: `VIAVEL` / `NAO VIAVEL` com justificativa
-- Escrever pelo menos **3 casos de teste** com entradas e saidas esperadas documentadas no codigo
+```bash
+python validador.py
+```
 
-### Entregavel:
-- Arquivo principal do programa funcionando (`main.py`) e estruturas auxiliares (`models.py`, `validator.py`)
+Cenários testados:
+
+1. Caso viável
+2. Caso inviável
+3. Caso de incompatibilidade da linguagem base
 
 ---
 
-## Pessoa 2 - README e Estrutura do Repositorio
+## Funcionalidades
 
-**Responsabilidade:** Garantir que o pacote entregue esteja organizado e que o `README.md` contenha as instrucoes exigidas pela rubrica.
-
-### Tarefas:
-- Criar e organizar o repositorio GitHub ou arquivo `.zip`
-- Escrever o `README.md` contendo:
-  - Descricao do projeto
-  - **Comandos exatos de terminal** para executar o programa
-  - Exemplo de uso com input e output esperado
-  - Rubrica de avaliacao
-- Definir a linguagem de programacao usada em conjunto com a Pessoa 1
-- Testar se o passo a passo do README funciona em uma maquina limpa
-
-### Entregavel:
-- `README.md` completo e repositorio/zip organizado
+- Representação de Diagramas em T através de classes
+- Normalização automática dos nomes das linguagens
+- Validação de bootstrapping
+- Validação de encadeamento entre compiladores
+- Tratamento de entradas inválidas
+- Mensagens explicativas para os resultados
 
 ---
 
-## Pessoa 3 - Relatorio Tecnico (PDF)
+## Autores
 
-**Responsabilidade:** Produzir o relatorio tecnico obrigatorio, seguindo as secoes exigidas pela rubrica.
+Projeto desenvolvido para a disciplina de **Compiladores**.
 
-### Tarefas:
-- Escrever o relatorio em PDF com as **3 secoes obrigatorias**:
-
-  **1. Introducao**
-  - O que sao Diagramas em T
-  - Qual problema o validador resolve
-
-  **2. Metodologia de Implementacao**
-  - Como a logica foi estruturada
-  - Quais regras foram modeladas e por que
-
-  **3. Casos de Teste**
-  - Incluir prints ou blocos de codigo mostrando **inputs e outputs reais** do programa
-  - Cobrir ao menos: caso viavel, caso inviavel e caso de entrada invalida
-
-### Entregavel:
-- Arquivo `relatorio.pdf` na raiz do repositorio/zip
-
-> **Atencao:** A Pessoa 3 depende do codigo pronto para tirar os prints dos casos de teste.
-
+- Caio Gabriel Pereira de Menezes Correia
+- Caio Renato dos Santos Claudino
+- José Francisco de Araújo Neto 
