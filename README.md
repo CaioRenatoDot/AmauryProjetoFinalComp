@@ -96,7 +96,7 @@ Cenários testados:
 
 1. Caso viável
 2. Caso inviável
-3. Caso de incompatibilidade da linguagem base
+3. Caso de entrada inválida
 
 ---
 
